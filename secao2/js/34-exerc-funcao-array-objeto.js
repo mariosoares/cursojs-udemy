@@ -1,6 +1,6 @@
 function meuEscopo () {
-    const form = document.querySelector('.form')
-    const resultado = document.querySelector('.resultado') // seleciona a div após formulário
+    const form = document.querySelector('.form') // seletor de classe, obtém o primeiro elemento com class "form"
+    const resultado = document.querySelector('.resultado') // seleciona a div com class "resultado" após formulário
     const pessoas = []
     let contador = 0
 
