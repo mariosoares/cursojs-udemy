@@ -18,8 +18,9 @@ console.log(pessoa.endereco.numero); console.log();
 
 // const {nome} = pessoa;
 // console.log(nome);
-const {nome: luiz = 'Nome dele', sobrenome= 'Sem sobrenome?', idade = 'Sem idade?'} = pessoa;
-console.log(luiz, sobrenome, idade, '<---- variável nome foi alterada para luiz, que teve valor padrão "Nome dele" ');
+// altera o nome da variável "nome" para "teste"
+const {nome: teste = 'Nome dele', sobrenome= 'Sem sobrenome?', idade = 'Sem idade?'} = pessoa;
+console.log(teste, sobrenome, idade, '<---- variável nome foi alterada para teste, que teve valor padrão "Nome dele" ');
 
 const {endereco: {logradouro, numero}, endereco} = pessoa;
 console.log(logradouro, numero);
@@ -35,4 +36,5 @@ const pessoa2 = {
     }
 }
 const {nome, ...resto} = pessoa2; // vai criar um object dividido em "nome / demais termos", ver aula anterior
-console.log(nome, resto);
+console.log(nome);
+console.log(resto);
