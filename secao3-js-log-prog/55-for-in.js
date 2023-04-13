@@ -5,7 +5,7 @@
 
 // Array, vetor -> array de uma dimensão
 // este for in lê os índices do array ou as chaves do objeto
-const frutas = ['Pêra', 'Maçã', 'Uva'];
+const frutas = ['Pera', 'Maçã', 'Uva'];
 for (let i in frutas) {
     console.log(`Índice ${i} -> ${frutas[i]}`);
 } 
