@@ -1,6 +1,7 @@
 // As funções não apresentam erros se usarmos argumentos não solicitados
-// arguments -> dó funciona usando a palavra reservada function (não funciona para arrow), armazena todos os parâmetros em uma
-// expressão denominada arguments, como um object com chaves similares aos índices dos arrays, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ...
+// arguments -> só funciona usando a palavra reservada function (não funciona com arrow function),
+// armazena todos os parâmetros em uma expressão denominada arguments, como um object com chaves
+// similares aos índices dos arrays, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ...
 
 //PAREI ESTA AULA EM 15:47, em funcao3
 
@@ -13,17 +14,20 @@ funcao('valor',1,2,3,4,5);
 
 function somaArgumentos(){
     let resultado = 0;
+    let resutado1 = 0;
     let i = 0;
-    // for (let argumento of arguments){
+    // for (let argumento of arguments){ // retorna o próprio valor do argumento
     //     resultado += argumento;
     // }
     for (i in arguments){  
-        //console.log(i); // i retorna o índice
+        //console.log(i); // i retorna o índice do argumento no array
         resultado += arguments[i];
     }
     return resultado;
 }
-console.log(`A soma dos argumentos passados na chamada da função é ${somaArgumentos(1,2,3,4,5)}`); console.log();
+//console.log(`A soma dos argumentos passados na chamada da função é ${somaArgumentos(1,2,3,4,5)}`); console.log();
+soma = somaArgumentos(1, 2, 3, 4, 5);
+console.log(`A soma dos argumentos passados na chamada da função é ${soma}`); console.log();
 
 function funcao(a, b, c) {
     let total = 0;
@@ -70,6 +74,7 @@ valorPadrao3(2, 10, 20);
 valorPadrao3(2, '', 20);
 // neste caso, a única maneira da função assumir o valor padrão de b é com undefined
 valorPadrao3(2, undefined, 20); 
+valorPadrao3(2, null, 20); // o mull é assumido como zero
 //valorPadrao3(2, , 20); -> erro! 
 console.log();
 
