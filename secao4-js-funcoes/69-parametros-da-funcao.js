@@ -78,15 +78,61 @@ valorPadrao3(2, null, 20); // o mull é assumido como zero
 //valorPadrao3(2, , 20); -> erro! 
 console.log();
 
-function funcao3(nome, sobrenome, idade) {
+// atribuição via desestruturação de um objeto
+function funcao3({nome, sobrenome, idade}) { //fazendo a desestruração nos parâmetros, retirando as variáveis
     console.log(nome, sobrenome, idade);
 }
 
+// enviando um objeto literal como parâmetro
+funcao3({nome: 'Luiz', sobrenome: 'Otávio', idade: 20});
+
+let obj ={nome: 'Luiz', sobrenome: 'Otávio', idade: 20};
+funcao3(obj);console.log();
+
+
+// desestruturação de um array
+function funcao4([valor1, valor2, valor3]) { //fazendo a desestruração nos parâmetros, retirando as variáveis
+    console.log(valor1, valor2, valor3);
+}
+funcao4(['Luiz', 'Otávio', 30]); 
+//poderia passar utilizar uma variável
+var1 = ['Luiz Otávio', 'Miranda', 28];
+funcao4(var1); console.log(); 
+
+// O operador rest, "...alguma coisa", quando usado como parâmetro de função, cria um array com os valores de todas as entradas passadas
+// pelo usuário, como:
+// o parametro rest sempre precisa ser o último parâmetro da função, ou dá erro.
+
+// Criar uma função que realiza a operação informada, com todos os demais termos (...rest). Ex:
+function conta(operador, acumulador, ...numeros){ // se não usasse rest operator teria que passar um array para numeros
+    console.log(operador, acumulador, numeros);
+    let texto = ' ';
+    for(let numero of numeros){
+        texto += numero + ' ';
+        if (operador === '+'){
+            acumulador += numero;
+        }
+        if (operador === '-'){
+            acumulador -= numero;
+        }
+        if (operador === '*'){
+            acumulador *= numero;
+        }
+        if (operador === '/'){
+            acumulador /= numero;
+        }
+    }
+    //console.log(texto);
+    console.log('acumulador --> ',acumulador);
+}
+conta('+', 0, 20, 30, 40, 50); // conta('+', 0, [20, 30, 40, 50]) -> sem rest operator
+conta('*', 1, 20, 30);
+console.log();
 
 // Método alternativo para captar o arguments em arrow function através do rest operator
-const argumentsArrow = (...arguments) => {
-    console.log(arguments);
-    console.log(`O valor do arguments[5] é ${arguments[5]}`);
+const argumentsArrow = (...args) => { 
+    console.log(args);
+    console.log(`O valor do arguments[5] é ${args[5]}`);
     console.log(`Foram passados ${arguments.length} argumentos na chamada da função.`);
 }
 argumentsArrow('valor',1,2,3,4,5);
