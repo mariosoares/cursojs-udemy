@@ -1,0 +1,4 @@
+* imprimir as operações feitas (textarea) como se fosse num papel, antigas máquinas de calcular
+* botão de memória
+* tirar eval
+* consultar api p/ conversão de moeda
