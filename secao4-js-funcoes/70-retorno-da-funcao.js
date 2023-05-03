@@ -4,7 +4,7 @@
 function soma (a, b) {
     return a + b;
 }
-let varSoma = soma(3, 5)
+let varSoma = soma(3, 5);
 console.log(varSoma);
 
 function soma2 (a, b) {

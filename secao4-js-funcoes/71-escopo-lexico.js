@@ -7,7 +7,7 @@
 const nome = 'Luiz';
 
 function falaNome(){
-    //const nome = 'Otávio'; // se descomentar a saída será Otávio
+    const nome = 'Otávio'; // se descomentar a saída será Otávio
     console.log(nome);
 }
 

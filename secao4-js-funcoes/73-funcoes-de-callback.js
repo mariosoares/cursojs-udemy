@@ -1,6 +1,22 @@
+//Uma função callback é uma função passada a outra função como argumento, que é então invocado dentro da função externa
+// para completar algum tipo de rotina ou ação.
 // No javascript, muitas vezes não temos como controlar quando a função receberá
 // os dados que necessita e quando finalizará sua execução devido latência, tempo de resposta
 // de servidor e etc. Como exemplo, não é possível prever a ordem que as funções a seguir serão executadas:
+
+//Exemplo da MDN super simples, não precisa ver nada após este exemplo:
+function greeting(name) {
+    console.log('Olá ' + name);
+  }
+
+  greeting('mario');console.log();
+
+  function userInput(callback){
+    let nome = 'mario';
+    callback(nome);
+  }
+
+  userInput(greeting);
 
 // Nesta execução 
 /*function rand(min = 1000, max = 3000) {

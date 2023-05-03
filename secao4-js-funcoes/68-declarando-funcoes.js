@@ -11,7 +11,7 @@ function falaOi() {
 // function expression
 
 const souUmDado = function (){ // a constante recebeu a função (anônima) como dado, poderia nomear a função que
-    //bão alteraria nada
+    //não alteraria nada
     console.log('Sou um dado.'); console.log();
 }
 //const souUmDado = () => {return console.log('Sou um dado.')}; // código equivalente

@@ -1,6 +1,12 @@
 // IIFE -> Immediately Invoked Function Expression, também chamadas funções auto-invocadas
-// Função que é chamada assim que é definida. Para chamar, basta escrever a função como: (function(parametros) {bloco})()
+// Função que é executada assim que é definida. Para chamar, basta escrever a função como: (function(parametros) {bloco})()
 // É importante para fugir do escopo global, pois tudo que é definido dentro dela não é salvo globalmente. 
+//não temos conflito nessa situação:
+(function(){
+    const nome = 'Luiz';
+})();
+const nome = 'Qualquer coisa';
+
 //É necessário que antes de uma IIFE, exista um ";", pois caso contrário,
 // o javascript pensa que a IIFE está tentando executar o termo anterior como função.
 // cria uma função anônima dentro de parênteses e chama ela imediateamento com ()
@@ -21,6 +27,8 @@ const pessoa2 = 'João Também';
 (function() {
     console.log(pessoa2);
 })();
+
+console.log();
 
 // Ex usual:
 // No () final, podem ser passados parâmetros

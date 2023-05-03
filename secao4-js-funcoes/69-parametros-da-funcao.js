@@ -1,16 +1,20 @@
 // As funções não apresentam erros se usarmos argumentos não solicitados
 // arguments -> só funciona usando a palavra reservada function (não funciona com arrow function),
-// armazena todos os parâmetros em uma expressão denominada arguments, como um object com chaves
+// armazena todos os argumentos em uma expressão denominada arguments, como um object com chaves
+// o número de parâmetros pode ser visto com funcao.lengtn
 // similares aos índices dos arrays, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ...
 
 //PAREI ESTA AULA EM 15:47, em funcao3
 
-function funcao(){
+function funcao0(){
     console.log(`O valor do arguments[5] é ${arguments[5]}`);
+    console.log(typeof arguments);
+    console.log(arguments instanceof Array);
     console.log(arguments);
+    console.log(`Foram definidos ${funcao0.length} parâmetros para a função.`)
     console.log(`Foram passados ${arguments.length} argumentos na chamada da função.`);
 }
-funcao('valor',1,2,3,4,5);
+funcao0('valor',1,2,3,4,5);
 
 function somaArgumentos(){
     let resultado = 0;
@@ -79,7 +83,7 @@ valorPadrao3(2, null, 20); // o mull é assumido como zero
 console.log();
 
 // atribuição via desestruturação de um objeto
-function funcao3({nome, sobrenome, idade}) { //fazendo a desestruração nos parâmetros, retirando as variáveis
+function funcao3({nome, sobrenome, idade}) { //fazendo a desestruturação nos parâmetros, retirando as variáveis
     console.log(nome, sobrenome, idade);
 }
 
@@ -91,7 +95,7 @@ funcao3(obj);console.log();
 
 
 // desestruturação de um array
-function funcao4([valor1, valor2, valor3]) { //fazendo a desestruração nos parâmetros, retirando as variáveis
+function funcao4([valor1, valor2, valor3]) { //fazendo a desestruturação nos parâmetros, retirando as variáveis
     console.log(valor1, valor2, valor3);
 }
 funcao4(['Luiz', 'Otávio', 30]); 
