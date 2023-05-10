@@ -20,11 +20,17 @@ class DispositivoEletronico {
         this.ligado = false;
     }
 }
+const d1 = new DispositivoEletronico('rádio');
+console.log(d1.ligado);
+d1.ligar();
+d1.ligar();
+console.log(d1.ligado); console.log();
 
 // Criando nova classe que herda da classe "DispositivoEletronico"
 // extends -> basta utilizar esta palavra reservada para definir a classe como filha da outra
 // super() -> faz com que a nova classe herde os parametros da classe mãe
 // ^ é obrigatório
+// MDN -> Um construtor pode usar a palavra-chave super para chamar o construtor de uma classe pai
 
 class Smartphone extends DispositivoEletronico {
     constructor(nome, cor, modelo) {
@@ -37,6 +43,7 @@ class Smartphone extends DispositivoEletronico {
 
 const s1 = new Smartphone('iPhone', 'Rose', 'XR 128GB');
 console.log(s1);
+console.log(s1.ligado);console.log();
 
 class Tablet extends DispositivoEletronico {
     constructor(nome, temWifi) {
