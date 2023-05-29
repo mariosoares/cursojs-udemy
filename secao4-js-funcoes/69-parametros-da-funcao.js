@@ -1,12 +1,14 @@
 // As funções não apresentam erros se usarmos argumentos não solicitados
 // arguments -> só funciona usando a palavra reservada function (não funciona com arrow function),
 // armazena todos os argumentos em uma expressão denominada arguments, como um object com chaves
-// o número de parâmetros pode ser visto com funcao.lengtn
+// o número de parâmetros pode ser visto com funcao.length
 // similares aos índices dos arrays, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ...
 
 //PAREI ESTA AULA EM 15:47, em funcao3
 
 function funcao0(){
+    key_arg = Object.keys(arguments); // as chaves são strings
+    console.log(key_arg);
     console.log(`O valor do arguments[5] é ${arguments[5]}`);
     console.log(typeof arguments);
     console.log(arguments instanceof Array);
@@ -75,7 +77,7 @@ function valorPadrao3(a, b = 2, c = 4){
 valorPadrao3(2);
 valorPadrao3(2, 10);
 valorPadrao3(2, 10, 20);
-valorPadrao3(2, '', 20);
+valorPadrao3(2, ' ', 20);
 // neste caso, a única maneira da função assumir o valor padrão de b é com undefined
 valorPadrao3(2, undefined, 20); 
 valorPadrao3(2, null, 20); // o mull é assumido como zero
